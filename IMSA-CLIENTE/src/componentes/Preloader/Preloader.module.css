@@ -1,3 +1,18 @@
-.preloader{
-background-color: black;
+.preloader {
+  width: 100vw;
+  height: 100vh;
+  background-color: #a65cfb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
+
+.logo {
+  width: 150px;
+  max-width: 60%;
+  height: auto;
+}
+
+
