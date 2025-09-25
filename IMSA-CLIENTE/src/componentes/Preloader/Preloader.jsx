@@ -1,5 +1,5 @@
 import style from './Preloader.module.css'
-import logo from '../../assets/images/IMSA_Logo_Blanco.jpg'
+import logo from '../../assets/images/IMSA_Logo_Blanco.png'
 export default function Preloader(){
     return(
 <div className={style.preloader}> 

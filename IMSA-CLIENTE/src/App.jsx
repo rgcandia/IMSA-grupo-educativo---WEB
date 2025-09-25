@@ -1,4 +1,4 @@
-
+import Preloader from "./componentes/Preloader/Preloader.jsx"
 function App() {
   
 
