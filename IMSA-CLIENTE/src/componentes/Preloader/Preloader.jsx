@@ -1,5 +1,5 @@
 import style from './Preloader.module.css';
-import logo from '../../assets/images/IMSA_Logo_Blanco.png';
+import logo from '../../assets/images/IMSA_Logo_Color.png';
 import {Hourglass} from 'react-loader-spinner'
 
 export default function Preloader() {
@@ -13,7 +13,7 @@ export default function Preloader() {
   ariaLabel="hourglass-loading"
   wrapperStyle={{}}
   wrapperClass=""
-  colors={[' #f4f0f9', '#372d69ff' ]}
+  colors={['  #935cfb ', '#b79afa ' ]}
   />
      
     </div>
