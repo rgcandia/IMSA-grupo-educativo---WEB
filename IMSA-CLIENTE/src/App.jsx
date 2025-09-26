@@ -9,7 +9,7 @@ function App() {
     // Esperar 2 segundos antes de ocultar el preloader
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 3000);
 
     // Limpieza del timer si el componente se desmonta antes
     return () => clearTimeout(timer);
