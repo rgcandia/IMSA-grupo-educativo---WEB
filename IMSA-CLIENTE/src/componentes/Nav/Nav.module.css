@@ -21,6 +21,9 @@
 }
 
 .enlaces a {
+  display: inline-flex;       /* Para que el texto y el icono estén en línea y flexibles */
+  align-items: center;        /* Centra verticalmente el contenido */
+  gap: 5px;                 
   cursor: pointer;  
   color: #b45dfc;
   text-decoration: none;
@@ -36,7 +39,20 @@
 }
 
 
-
 .redes {
-  /* Puedes agregar íconos de redes más adelante */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre íconos */
+}
+
+.redes svg {
+  font-size: 18px;           /* Tamaño de los íconos */
+  color: #b45dfc;            /* Color base */
+  transition: transform 0.2s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.redes svg:hover {
+  transform: scale(1.2);     /* Aumenta un poco al pasar el mouse */
+  color: #935cfb;            /* Un tono un poco más fuerte */
 }
