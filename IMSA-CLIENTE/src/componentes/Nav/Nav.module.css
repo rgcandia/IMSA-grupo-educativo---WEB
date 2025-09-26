@@ -13,6 +13,7 @@
     
   height: 50px; /* Ajusta según necesidad */
   width: auto;
+  margin-left: 100px;
 }
 
 .enlaces {
@@ -43,6 +44,7 @@
   display: flex;
   align-items: center;
   gap: 15px; 
+  margin-right: 100px;
 }
 
 .redes svg {
@@ -74,6 +76,7 @@
 
 .ingresar:hover {
  background-color: #f4f0f9;
-  color: #7a62fb !important;
-  border: 1px solid #7a62fb;
+  color: #b45dfc !important;
+  border: 1px solid  #b45dfc;
+  transform: none !important;
 }
