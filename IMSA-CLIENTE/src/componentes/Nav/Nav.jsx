@@ -3,6 +3,7 @@ import logo from '../../assets/images/logo_imsa_violeta_negro.png'
 import { IoCaretDown } from "react-icons/io5";
 import { FaFacebookF } from "react-icons/fa6";
 import { LuInstagram } from "react-icons/lu";
+import { FaUserCircle } from "react-icons/fa";
 export default function Nav (){
     return(
         <div className={style.nav}>
@@ -13,7 +14,7 @@ export default function Nav (){
             <a>CURSOS DE FORMACIÓN <IoCaretDown /></a>
             <a>NOSOTROS</a>
             <a>CONTACTO</a>
-            <a>INGRESAR</a>
+            <a className={style.ingresar}>INGRESAR </a>
 
           </div>
           <div className={style.redes}>

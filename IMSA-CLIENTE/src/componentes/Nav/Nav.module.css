@@ -25,7 +25,7 @@
   align-items: center;        /* Centra verticalmente el contenido */
   gap: 5px;                 
   cursor: pointer;  
-  color: #b45dfc;
+  color:#7a62fb ;
   text-decoration: none;
   font-weight: 300;
   font-size: 13px;
@@ -42,17 +42,38 @@
 .redes {
   display: flex;
   align-items: center;
-  gap: 15px; /* Espacio entre íconos */
+  gap: 15px; 
 }
 
 .redes svg {
   font-size: 18px;           /* Tamaño de los íconos */
-  color: #b45dfc;            /* Color base */
+  
+  color: #935cfb;  
+    color:#7a62fb ;          /* Color base */
   transition: transform 0.2s ease, color 0.3s ease;
   cursor: pointer;
 }
 
 .redes svg:hover {
   transform: scale(1.2);     /* Aumenta un poco al pasar el mouse */
-  color: #935cfb;            /* Un tono un poco más fuerte */
+   color: #b45dfc;            /* Un tono un poco más fuerte */
+}
+
+.ingresar {
+  background-color: #7a62fb;
+  color: white !important;   /* Asegura que se vea blanco */
+  border: 1px solid #7a62fb;
+  padding: 5px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+  transition: none !important;
+}
+
+.ingresar:hover {
+ background-color: #f4f0f9;
+  color: #7a62fb !important;
+  border: 1px solid #7a62fb;
 }
