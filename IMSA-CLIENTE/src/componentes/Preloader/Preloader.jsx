@@ -8,8 +8,8 @@ export default function Preloader() {
       <img src={logo} alt="Logo IMSA" className={style.logo} />
      <Hourglass
   visible={true}
-  height="80"
-  width="80"
+  height="50"
+  width="50"
   ariaLabel="hourglass-loading"
   wrapperStyle={{}}
   wrapperClass=""
