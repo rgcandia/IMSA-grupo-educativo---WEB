@@ -49,8 +49,6 @@
 
 .redes svg {
   font-size: 18px;           /* Tamaño de los íconos */
-  
-  color: #935cfb;  
     color:#7a62fb ;          /* Color base */
   transition: transform 0.2s ease, color 0.3s ease;
   cursor: pointer;
@@ -82,6 +80,67 @@
   
 }
 
+/* Menu Hamburguesa*/
+/* Menú desplegable para mobile */
+.menuMobile {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.menuLinks a {
+  display: flex;       /* Para que el texto y el icono estén en línea y flexibles */
+  align-items: center;        /* Centra verticalmente el contenido */
+  gap: 5px;                 
+  cursor: pointer;  
+  color:#7a62fb ;
+  text-decoration: none;
+text-align: center;
+  font-weight: 300;
+  font-size: 13px;
+  transition: text-shadow 0.3s ease, transform 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+}
+.menuLinks a:hover {
+ background-color: #f4f0f9;
+  color: #b45dfc !important;
+   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px); /* ← pequeño movimiento hacia arriba */
+  
+}
+.menuRedes{
+  display: flex;
+    gap: 15px;
+}
+.menuRedes svg {
+  
+
+  margin-top: 10px;
+    font-size: 18px;           /* Tamaño de los íconos */  
+    color:#7a62fb ;          /* Color base */
+  transition: transform 0.2s ease, color 0.3s ease;
+  cursor: pointer;
+  
+}
+.menuRedes svg:hover{
+   transform: scale(1.2);     /* Aumenta un poco al pasar el mouse */
+   color: #b45dfc;   
+}
+
+.hamburguesa {
+  display: none;
+}
+
 
 @media(max-width:1100px){
   .logo img {
@@ -94,5 +153,11 @@
 @media(max-width:800px){
   .enlaces{
     display: none;
+  }
+  .redes{
+    display: none;
+  }
+    .hamburguesa {
+    display: block;
   }
 }
