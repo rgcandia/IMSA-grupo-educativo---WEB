@@ -5,13 +5,31 @@ import { FaFacebookF } from "react-icons/fa6";
 import { LuInstagram } from "react-icons/lu";
 import { CiMenuBurger } from "react-icons/ci";
 import { CiMenuFries } from "react-icons/ci";
-import { useState } from 'react'; // 👈 no olvides importar esto
+import { useState , useEffect} from 'react'; // 👈 no olvides importar esto
 
 export default function Nav (){
 
-  
 // dentro del componente:
 const [menuAbierto, setMenuAbierto] = useState(false);
+// Use Effect para 
+  useEffect(()=>{
+ const mediaQuery = window.matchMedia('(max-width: 800px)');
+
+    // Función que se llama cada vez que cambia el ancho
+    const handleResize = () => {
+      if (!mediaQuery.matches) {
+        // Si la pantalla se agranda, cerramos el menú
+        setMenuAbierto(false);
+      }
+    };
+
+    mediaQuery.addEventListener('change', handleResize);
+
+    // Limpieza
+    return () => {
+      mediaQuery.removeEventListener('change', handleResize);
+    };
+  },[])
 
     return(
         <div className={style.nav}>
