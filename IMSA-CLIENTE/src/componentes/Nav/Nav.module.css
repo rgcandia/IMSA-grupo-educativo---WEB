@@ -81,3 +81,18 @@
   transform: none !important;
   
 }
+
+
+@media(max-width:1100px){
+  .logo img {
+  margin-left: 0;
+}
+.redes{
+  margin-right: 0;
+}
+}
+@media(max-width:800px){
+  .enlaces{
+    display: none;
+  }
+}
