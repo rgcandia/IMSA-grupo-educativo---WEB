@@ -1,7 +1,6 @@
 .carrusel {
+  height: 89vh;
   position: relative;
-  width: 100vw;
-  height: 70vh;
   overflow: hidden;
   display: flex;
   align-items: center;
