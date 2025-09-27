@@ -1,10 +1,10 @@
 // src/components/Main/Main.jsx
-import Carrusel from '../Carrusel/Carrusel';
+import Carrousel from '../Carrousel/Carrousel';
 
 export default function Main() {
   return (
     <main>
-      <Carrusel />
+      <Carrousel />
     </main>
   );
 }

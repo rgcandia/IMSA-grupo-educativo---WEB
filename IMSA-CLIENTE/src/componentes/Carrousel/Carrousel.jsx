@@ -1,10 +1,10 @@
-// src/components/Carrusel/Carrusel.jsx
 import { useState, useEffect } from 'react';
-import style from './Carrusel.module.css';
+import style from './Carrousel.module.css';
 
-export default function Carrusel() {
+export default function Carrousel() {
   const slides = [
     {
+      imagen: "/img/carrousel/IMSA_Carrousel_1.jpg",
       titulo: "Tus oportunidades no tienen límites",
       parrafos: [
         "Poder estudiar desde cualquier lugar del mundo y comenzar tu camino profesional.",
@@ -13,18 +13,20 @@ export default function Carrusel() {
       boton: "Ver cursos de formación",
     },
     {
+      imagen: "/img/carrousel/IMSA_Carrousel_2.jpg",
       titulo: "Aprendé desde donde estés",
       parrafos: [
-        "Nuestros cursos están creado con una mirada práctica y humana.",
+        "Nuestros cursos están creados con una mirada práctica y humana.",
         "Porque aprender es más que estudiar: es crecer, elegir y transformar",
       ],
       boton: "Conocenos más",
     },
     {
+      imagen: "/img/carrousel/IMSA_Carrousel_3.jpg",
       titulo: "Una experiencia de aprendizaje que te acompaña",
       parrafos: [
         "Nuestros cursos organizados por módulos, con calendario de actividades, contenidos actualizados y espacios de consulta directa.",
-        "estudiás con libertad, pero siempre acompañado",
+        "Estudiás con libertad, pero siempre acompañado.",
       ],
       boton: "Ver cursos de formación",
     },
@@ -44,10 +46,16 @@ export default function Carrusel() {
 
   return (
     <div className={style.carrusel}>
-      <div className={style.slide}>
+      <img
+        src={actual.imagen}
+        alt={`Slide ${indice + 1}`}
+        className={style.img}
+      />
+
+      <div className={style.texto}>
         <h1>{actual.titulo}</h1>
-        {actual.parrafos.map((texto, i) => (
-          <p key={i}>{texto}</p>
+        {actual.parrafos.map((p, i) => (
+          <p key={i}>{p}</p>
         ))}
         <button className={style.boton}>{actual.boton}</button>
       </div>
