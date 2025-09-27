@@ -5,7 +5,7 @@ import { FaFacebookF } from "react-icons/fa6";
 import { LuInstagram } from "react-icons/lu";
 import { CiMenuBurger } from "react-icons/ci";
 import { CiMenuFries } from "react-icons/ci";
-import { useState , useEffect} from 'react'; // 👈 no olvides importar esto
+import { useState , useEffect} from 'react'; 
 
 export default function Nav (){
 
