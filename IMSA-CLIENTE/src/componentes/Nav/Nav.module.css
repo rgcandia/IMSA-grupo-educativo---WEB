@@ -98,6 +98,7 @@
 }
 
 .menuLinks a {
+  margin: 5px;
   display: flex;       /* Para que el texto y el icono estén en línea y flexibles */
   align-items: center;        /* Centra verticalmente el contenido */
   gap: 5px;                 
