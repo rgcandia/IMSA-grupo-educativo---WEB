@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import styles from './Formacion.module.css';
 
 const areas = [
@@ -14,28 +14,18 @@ export default function Formacion() {
   return (
     <div className={styles.container}>
       {areas.map((area, index) => (
-        <Card key={index} area={area} />
+        <div key={index} className={styles.card}>
+          <img
+            src={area.url_img}
+            alt={area.title}
+            className={styles.image}
+          />
+          <div className={styles.content}>
+            <p className={styles.title}>{area.title}</p>
+            <button className={styles.button}>Ver cursos</button>
+          </div>
+        </div>
       ))}
-    </div>
-  );
-}
-
-function Card({ area }) {
-  const [loaded, setLoaded] = useState(false);
-
-  return (
-    <div className={styles.card}>
-      <div className={`${styles.placeholder} ${loaded ? styles.hidden : ''}`} />
-      <img
-        src={area.url_img}
-        alt={area.title}
-        className={`${styles.image} ${loaded ? styles.visible : ''}`}
-        onLoad={() => setLoaded(true)}
-      />
-      <div className={styles.content}>
-        <p className={styles.title}>{area.title}</p>
-        <button className={styles.button}>Ver cursos</button>
-      </div>
     </div>
   );
 }
