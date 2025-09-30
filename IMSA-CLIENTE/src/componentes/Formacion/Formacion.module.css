@@ -7,7 +7,6 @@
   gap: 20px;
 }
 
-/* Responsive */
 @media (max-width: 992px) {
   .container {
     margin-left: 10%;
@@ -36,6 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #000; /* <- fondo oscuro para evitar parpadeo blanco */
 }
 
 .card:hover {
@@ -46,11 +46,13 @@
   position: absolute;
   top: 0;
   left: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.6); /* oscurece la imagen para que el texto sea legible */
+  filter: brightness(0.6);
   z-index: 1;
+  background-color: #000; /* <- asegura que nunca se vea blanco debajo */
 }
 
 .content {
@@ -65,7 +67,6 @@
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
- 
 }
 
 .button {
@@ -84,4 +85,3 @@
   background-color: white;
   color: #1b1622;
 }
-
