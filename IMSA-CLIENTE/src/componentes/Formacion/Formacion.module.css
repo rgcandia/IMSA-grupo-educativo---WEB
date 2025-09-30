@@ -35,7 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000; /* <- fondo oscuro para evitar parpadeo blanco */
+  background-color: transparent; /* <- fondo oscuro para evitar parpadeo blanco */
 }
 
 .card:hover {

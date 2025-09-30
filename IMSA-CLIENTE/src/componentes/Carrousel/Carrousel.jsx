@@ -46,11 +46,13 @@ export default function Carrousel() {
 
   return (
     <div className={style.carrusel}>
-      <img
-        src={actual.imagen}
-        alt={`Slide ${indice + 1}`}
-        className={style.img}
-      />
+    <img
+  src={actual.imagen}
+  alt={`Slide ${indice + 1}`}
+  className={style.img}
+  loading="eager"
+/>
+
 
       <div className={style.texto}>
         <h1>{actual.titulo}</h1>
