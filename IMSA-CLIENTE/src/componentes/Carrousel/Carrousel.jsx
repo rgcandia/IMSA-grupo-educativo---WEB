@@ -4,7 +4,7 @@ import style from './Carrousel.module.css';
 export default function Carrousel() {
   const slides = [
     {
-      imagen: "/img/carrousel/IMSA_Carrousel_1.jpg",
+      imagen: "/img/carrousel/IMSA_Carrousel_1.webp",
       titulo: "Tus oportunidades no tienen límites",
       parrafos: [
         "Poder estudiar desde cualquier lugar del mundo y comenzar tu camino profesional.",
@@ -13,7 +13,7 @@ export default function Carrousel() {
       boton: "Ver cursos de formación",
     },
     {
-      imagen: "/img/carrousel/IMSA_Carrousel_2.jpg",
+      imagen: "/img/carrousel/IMSA_Carrousel_2.webp",
       titulo: "Aprendé desde donde estés",
       parrafos: [
         "Nuestros cursos están creados con una mirada práctica y humana.",
@@ -22,7 +22,7 @@ export default function Carrousel() {
       boton: "Conocenos más",
     },
     {
-      imagen: "/img/carrousel/IMSA_Carrousel_3.jpg",
+      imagen: "/img/carrousel/IMSA_Carrousel_3.webp",
       titulo: "Una experiencia de aprendizaje que te acompaña",
       parrafos: [
         "Nuestros cursos organizados por módulos, con calendario de actividades, contenidos actualizados y espacios de consulta directa.",

@@ -4,15 +4,15 @@ import Home from "./componentes/Home/Home.jsx";
 
 // ✅ Lista de imágenes a precargar
 const imagesToPreload = [
-  "/img/carrousel/IMSA_Carrousel_1.jpg",
-  "/img/carrousel/IMSA_Carrousel_2.jpg",
-  "/img/carrousel/IMSA_Carrousel_3.jpg",
-  "/img/Formacion/salud.png",
-  "/img/Formacion/idiomas.jpg",
-  "/img/Formacion/belleza.jpg",
-  "/img/Formacion/diseño.jpg",
-  "/img/Formacion/tecnologia.jpg",
-  "/img/Formacion/tecnicos.jpg",
+  "/img/carrousel/IMSA_Carrousel_1.webp",
+  "/img/carrousel/IMSA_Carrousel_2.webp",
+  "/img/carrousel/IMSA_Carrousel_3.webp",
+  "/img/Formacion/salud.webp",
+  "/img/Formacion/idiomas.webp",
+  "/img/Formacion/belleza.webp",
+  "/img/Formacion/diseño.webp",
+  "/img/Formacion/tecnologia.webp",
+  "/img/Formacion/tecnicos.webp",
 ];
 
 function App() {
