@@ -14,7 +14,7 @@ export default function Formacion() {
   return (
     <div className={styles.container}>
       {areas.map((area, index) => (
-        <div key={index} className={styles.card}>
+        <div key={area.title} className={styles.card}>
           <img
             src={area.url_img}
             alt={area.title}
