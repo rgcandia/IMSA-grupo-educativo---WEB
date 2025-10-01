@@ -104,7 +104,7 @@
     top: auto;            /* Anulamos top */
     bottom: 20px;         /* Ahora se ubica 20px desde el fondo */
     transform: none;      /* Quitamos el centrado vertical */
-    padding: 0 20px;
+    
   }
 
   .controlBtn {
