@@ -71,7 +71,6 @@
 .controles {
   position: absolute;
   top: 50%;
-
   left: 0;
   right: 0;
   display: flex;
@@ -102,9 +101,6 @@
 
 @media (max-width: 768px) {
   .controles {
-    top: auto;
-    bottom: 20px;
-    transform: none;
-    padding: 0 20px;
+    transform: translateY(90%);
   }
 }
