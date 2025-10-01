@@ -71,6 +71,7 @@
 .controles {
   position: absolute;
   top: 50%;
+
   left: 0;
   right: 0;
   display: flex;
@@ -97,4 +98,13 @@
 
 .controlBtn:hover {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .controles {
+    top: auto;
+    bottom: 20px;
+    transform: none;
+    padding: 0 20px;
+  }
 }
