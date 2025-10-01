@@ -11,7 +11,8 @@ const areas = [
 ];
 
 function Formacion() {
-  return (
+  return (<>
+  <h2 className={styles.title2}>ÁREA DE FORMACIÓN</h2>
     <div className={styles.container}>
       {areas.map((area) => (
         <div key={area.title} className={styles.card}>
@@ -28,7 +29,9 @@ function Formacion() {
         </div>
       ))}
     </div>
-  );
+  
+  </>);
+  
 }
 
 export default React.memo(Formacion);
