@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .carrusel {
-  height: 90vh;
+  height: 92vh;
   position: relative;
   overflow: hidden;
   display: flex;
