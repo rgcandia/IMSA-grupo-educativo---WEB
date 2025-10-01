@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import style from './Carrousel.module.css';
 
 export default function Carrousel() {
@@ -33,26 +33,56 @@ export default function Carrousel() {
   ];
 
   const [indice, setIndice] = useState(0);
+  const [pausado, setPausado] = useState(false);
+  const intervaloRef = useRef(null);
 
-  useEffect(() => {
-    const intervalo = setInterval(() => {
+  const iniciarAutoAvance = () => {
+    if (intervaloRef.current) clearInterval(intervaloRef.current);
+    intervaloRef.current = setInterval(() => {
       setIndice((prev) => (prev + 1) % slides.length);
     }, 6000);
+  };
 
-    return () => clearInterval(intervalo);
-  }, [slides.length]);
+  useEffect(() => {
+    if (!pausado) {
+      iniciarAutoAvance();
+    }
+
+    return () => clearInterval(intervaloRef.current);
+  }, [pausado]);
+
+  const handleClickImagen = () => {
+    setPausado(true);
+    clearInterval(intervaloRef.current);
+
+    // Reactivar después de 15s
+    setTimeout(() => {
+      setPausado(false);
+    }, 15000);
+  };
+
+  const handleManualChange = (nuevaDireccion) => {
+    setIndice((prev) => (prev + nuevaDireccion + slides.length) % slides.length);
+    setPausado(true);
+    clearInterval(intervaloRef.current);
+
+    // Reactivar después de 15s también
+    setTimeout(() => {
+      setPausado(false);
+    }, 15000);
+  };
 
   const actual = slides[indice];
 
   return (
     <div className={style.carrusel}>
-    <img
-  src={actual.imagen}
-  alt={`Slide ${indice + 1}`}
-  className={style.img}
-  loading="eager"
-/>
-
+      <img
+        src={actual.imagen}
+        alt={`Slide ${indice + 1}`}
+        className={style.img}
+        loading="eager"
+        onClick={handleClickImagen}
+      />
 
       <div className={style.texto}>
         <h1>{actual.titulo}</h1>
@@ -60,6 +90,12 @@ export default function Carrousel() {
           <p key={i}>{p}</p>
         ))}
         <button className={style.boton}>{actual.boton}</button>
+      </div>
+
+      {/* Controles manuales */}
+      <div className={style.controles}>
+        <button onClick={() => handleManualChange(-1)} className={style.controlBtn}>◀</button>
+        <button onClick={() => handleManualChange(1)} className={style.controlBtn}>▶</button>
       </div>
     </div>
   );
