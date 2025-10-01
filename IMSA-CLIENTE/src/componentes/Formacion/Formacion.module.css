@@ -36,9 +36,11 @@
   align-items: center;
   justify-content: center;
   background-color: #000;
+  /* Eliminado:
   will-change: transform;
   content-visibility: auto;
   contain-intrinsic-size: 250px;
+  */
 }
 
 .card::before {

@@ -1,4 +1,4 @@
-
+import React from 'react';
 import styles from './Formacion.module.css';
 
 const areas = [
@@ -10,15 +10,16 @@ const areas = [
   { title: 'TÉCNICOS', url_img: '/img/Formacion/tecnicos.webp' },
 ];
 
-export default function Formacion() {
+function Formacion() {
   return (
     <div className={styles.container}>
-      {areas.map((area, index) => (
+      {areas.map((area) => (
         <div key={area.title} className={styles.card}>
           <img
             src={area.url_img}
             alt={area.title}
             className={styles.image}
+            loading="eager"
           />
           <div className={styles.content}>
             <p className={styles.title}>{area.title}</p>
@@ -29,3 +30,5 @@ export default function Formacion() {
     </div>
   );
 }
+
+export default React.memo(Formacion);
