@@ -7,5 +7,9 @@ export default function Home(){
     <Nav/>
     <Main/>
     <Footer/>
+        
+<a href="https://wa.me/5491137729571"  className={style.wafloat} target="_blank" rel="noopener">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
     </div>);
 }
