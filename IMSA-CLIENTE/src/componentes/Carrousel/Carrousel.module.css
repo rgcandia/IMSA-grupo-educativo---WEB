@@ -102,8 +102,10 @@
 @media (max-width: 768px) {
   .controles {
     top: auto;            /* Anulamos top */
-    bottom: 100px;         /* Ahora se ubica 20px desde el fondo */
+    bottom: 100px;        
     transform: none;      /* Quitamos el centrado vertical */
+    justify-content: center;
+    gap: 20px;
     
   }
 
