@@ -45,7 +45,7 @@ export default function Nosotros() {
           </div>
 
           <div className={style.botonContainer}>
-            <a href="/contacto" className={style.botonContacto}>Contactate con nosotros</a>
+            <a href="#" className={style.botonContacto}>Contactate con nosotros</a>
           </div>
         </div>
 
