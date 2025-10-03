@@ -1,19 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
 import style from './Redes.module.css';
-import facebook from '../../../public/img/redes/Facebook.png';
-import instagram from '../../../public/img/redes/Instagram.png';
+
 
 export default function Redes() {
   const sectionRef = useRef(null);
-  const [inView, setInView] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false); // <-- nuevo estado
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setInView(entry.isIntersecting);
+        // Solo animar si todavía no ocurrió
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true); // Marcar como animado
+        }
       },
       {
-        threshold: 0.5, // Se considera "visible" cuando al menos el 50% es visible
+        threshold: 0.5,
       }
     );
 
@@ -26,7 +28,7 @@ export default function Redes() {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []);
+  }, [hasAnimated]); // Escuchar por si cambia
 
   return (
     <section ref={sectionRef} className={style.banner}>
@@ -35,14 +37,14 @@ export default function Redes() {
         <p className={style.subtitulo}>Para estar al tanto de todas nuestras novedades</p>
         <div className={style.iconos}>
           <img
-            src={facebook}
+            src='/public/img/redes/Facebook.png'
             alt="Facebook"
-            className={`${style.icono} ${inView ? style.animate : ''} ${style.delay1}`}
+            className={`${style.icono} ${hasAnimated ? style.animate : ''} ${style.delay1}`}
           />
           <img
-            src={instagram}
+            src='/public/img/redes/Instagram.png'
             alt="Instagram"
-            className={`${style.icono} ${inView ? style.animate : ''} ${style.delay2}`}
+            className={`${style.icono} ${hasAnimated ? style.animate : ''} ${style.delay2}`}
           />
         </div>
       </div>
