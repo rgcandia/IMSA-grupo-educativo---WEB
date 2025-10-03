@@ -2,6 +2,7 @@
 import Carrousel from '../Carrousel/Carrousel';
 import Formacion from '../Formacion/Formacion';
 import Redes from '../Redes/Redes';
+import Nosotros from '../Nosotros/Nosotros';
 import style from './Main.module.css'
 export default function Main() {
   return (
@@ -9,6 +10,7 @@ export default function Main() {
       <Carrousel />
       <Formacion />
       <Redes />
+      <Nosotros/>
     </main>
   );
 }
