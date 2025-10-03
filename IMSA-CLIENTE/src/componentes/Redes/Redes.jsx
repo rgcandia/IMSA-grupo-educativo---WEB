@@ -37,12 +37,12 @@ export default function Redes() {
         <p className={style.subtitulo}>Para estar al tanto de todas nuestras novedades</p>
         <div className={style.iconos}>
           <img
-            src='/public/img/redes/Facebook.png'
+            src='/img/redes/Facebook.png'
             alt="Facebook"
             className={`${style.icono} ${hasAnimated ? style.animate : ''} ${style.delay1}`}
           />
           <img
-            src='/public/img/redes/Instagram.png'
+            src='/img/redes/Instagram.png'
             alt="Instagram"
             className={`${style.icono} ${hasAnimated ? style.animate : ''} ${style.delay2}`}
           />
