@@ -7,6 +7,7 @@
 
 .footer h4 {
   margin-bottom: 0.5rem;
+
 }
 
 .container {
@@ -18,6 +19,13 @@
 
 .section {
   margin: 1rem;
+
+}
+
+.section h4 {
+  font-weight: 400;
+  text-decoration: underline;
+  
 }
 
 /* Contacto */
@@ -38,7 +46,7 @@
 }
 
 .contactItem a:hover {
-  color: #007bff;
+   color:#7a62fb;
 }
 
 .contactItem svg {
@@ -63,7 +71,7 @@
 }
 
 .socialLink:hover {
-  color: #007bff;
+  color:#7a62fb;
 }
 
 .socialText {
