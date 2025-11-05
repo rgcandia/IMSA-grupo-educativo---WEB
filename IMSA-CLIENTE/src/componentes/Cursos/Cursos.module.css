@@ -61,6 +61,7 @@
   overflow: hidden;
   border-radius: 10px;
   margin-bottom: 15px;
+  position: relative; /* 💡 IMPORTANTE: Necesario para posicionar el logo ABSOLUTAMENTE dentro */
 }
 
 .cursoImg {
@@ -70,11 +71,25 @@
   border-radius: 10px;
 }
 
-/* BOTONES */
+/* 💡 ESTILOS PARA EL LOGO SUPERPUESTO */
+.cursoLogoOverlay {
+  position: absolute;
+  top: 10px; /* Ajusta la posición vertical */
+  left: 10px; /* Ajusta la posición horizontal */
+  z-index: 10; /* Asegura que esté por encima de la imagen del curso */
+  width: 100px; /* Mantiene el valor deseado de 100px */
+  height: auto;
+  pointer-events: none;
+}
+
+/* 💡 BOTÓN 'VER MÁS' (GHOST BUTTON / ACCIÓN SECUNDARIA) */
 .ingresar {
-  background-color: #7a62fb;
-  color: white !important;
-  border: 1px solid #7a62fb;
+  /* Cambio: Fondo transparente */
+  background-color: transparent;
+  /* Cambio: Color de texto del color de la marca */
+  color: #7a62fb !important;
+  /* Mantenemos el borde del color de la marca */
+  border: 1px solid #7a62fb; 
   padding: 8px 20px;
   border-radius: 30px;
   text-decoration: none;
@@ -82,35 +97,75 @@
   transition: all 0.3s ease;
   font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
+align-self: center;
 }
 
 .ingresar:hover {
-  background-color: #f4f0f9;
-  color: #b45dfc !important;
-  border: 1px solid #b45dfc;
+  /* Hover: Se rellena para la transición */
+  background-color: #7a62fb;
+  color: white !important;
+  border: 1px solid #7a62fb;
+  
 }
 
-/* BOTÓN FINAL */
+
+/* BOTÓN FINAL (VER TODOS LOS CURSOS DE FORMACIÓN) - SIN CAMBIOS EN ESTILO DE FONDO */
 .verTodos {
   margin-top: 40px;
 }
 
 .verTodosBtn {
+  /* Este se mantiene RELLENO */
+  background-color: #7a62fb;
+  color: white !important;
+  border: 1px solid #7a62fb;
   font-size: 1rem;
   padding: 10px 30px;
+  /* Ajuste para centrar el botón de "Ver todos" */
+  align-self: center;
 }
+
+/* Hover para VerTodosBtn (Mantiene el efecto original) */
+.verTodosBtn:hover {
+  background-color: #f4f0f9;
+  color: #b45dfc !important;
+  border: 1px solid #b45dfc;
+}
+
+/* 💡 ESTILOS PARA LA ETIQUETA ASINCRÓNICO - SIN CAMBIOS */
+.cursoAsincronicoTag {
+  position: absolute;
+  bottom: 10px; /* Abajo */
+  right: 10px; /* Derecha */
+  z-index: 15; /* Más alto que el logo */
+  background-color: #7a62fb; /* Color principal */
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  pointer-events: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .cursoImgWrapper {
     height: 180px;
   }
-
   .cursosTitle {
     font-size: 1.6rem;
   }
-
   .cursoCard {
     padding: 15px;
+  }
+  /* Ajuste de tamaño del logo en móvil - Mantiene 40px */
+  .cursoLogoOverlay {
+    width: 40px;
+    top: 8px;
+    left: 8px;
   }
 }

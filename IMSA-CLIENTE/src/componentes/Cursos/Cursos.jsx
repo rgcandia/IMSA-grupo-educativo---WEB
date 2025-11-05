@@ -1,5 +1,8 @@
 import styles from "./Cursos.module.css";
 
+
+const LOGO_URL = "/logo_imsa_blanco.png"; // Ruta del logo
+
 const cursosData = [
   {
     id: 1,
@@ -36,7 +39,7 @@ const cursosData = [
       "Aprendé inglés desde cero o perfeccioná tu nivel con un enfoque práctico para la comunicación cotidiana, profesional o laboral.",
     imagen: "/img/cursos/ingles.jpg",
   },
-    {
+  {
     id: 6,
     titulo: "Electricidad Domiciliaria",
     descripcion:
@@ -56,11 +59,19 @@ const Cursos = () => {
   return (
     <div className={styles.cursosContainer}>
       <h2 className={styles.cursosTitle}>ÁREA DE CURSOS</h2>
-
       <div className={styles.cursosGrid}>
         {cursosData.map((curso) => (
           <div key={curso.id} className={styles.cursoCard}>
             <div className={styles.cursoImgWrapper}>
+              {/* Logo superpuesto */}
+              <img
+                src={LOGO_URL}
+                alt="Logo IMSA"
+                className={styles.cursoLogoOverlay}
+              />
+              {/* 💡 Nueva Etiqueta para Asincrónico */}
+  <span className={styles.cursoAsincronicoTag}>CURSO ASINCRÓNICO</span>
+              {/* Imagen del curso */}
               <img
                 src={curso.imagen}
                 alt={curso.titulo}
@@ -73,7 +84,6 @@ const Cursos = () => {
           </div>
         ))}
       </div>
-
       <div className={styles.verTodos}>
         <button className={`${styles.ingresar} ${styles.verTodosBtn}`}>
           Ver todos los cursos de formación
@@ -84,4 +94,3 @@ const Cursos = () => {
 };
 
 export default Cursos;
-
