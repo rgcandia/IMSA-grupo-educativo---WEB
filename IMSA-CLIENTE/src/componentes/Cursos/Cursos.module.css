@@ -61,7 +61,7 @@
   overflow: hidden;
   border-radius: 10px;
   margin-bottom: 15px;
-  position: relative; /* 💡 IMPORTANTE: Necesario para posicionar el logo ABSOLUTAMENTE dentro */
+  position: relative; /* 💡 IMPORTANTE: Este es el contenedor de referencia */
 }
 
 .cursoImg {
@@ -71,24 +71,21 @@
   border-radius: 10px;
 }
 
-/* 💡 ESTILOS PARA EL LOGO SUPERPUESTO */
+/*  ESTILOS PARA EL LOGO SUPERPUESTO (¡CORRECCIONES APLICADAS!) */
 .cursoLogoOverlay {
   position: absolute;
-  top: 10px; /* Ajusta la posición vertical */
-  left: 10px; /* Ajusta la posición horizontal */
-  z-index: 10; /* Asegura que esté por encima de la imagen del curso */
-  width: 100px; /* Mantiene el valor deseado de 100px */
+  top: 5px; 
+  left: 5px; 
+  z-index: 20; 
+  width: 100px; 
   height: auto;
   pointer-events: none;
 }
 
-/* 💡 BOTÓN 'VER MÁS' (GHOST BUTTON / ACCIÓN SECUNDARIA) */
+/*  BOTÓN 'VER MÁS' (GHOST BUTTON / ACCIÓN SECUNDARIA) */
 .ingresar {
-  /* Cambio: Fondo transparente */
   background-color: transparent;
-  /* Cambio: Color de texto del color de la marca */
   color: #7a62fb !important;
-  /* Mantenemos el borde del color de la marca */
   border: 1px solid #7a62fb; 
   padding: 8px 20px;
   border-radius: 30px;
@@ -97,48 +94,43 @@
   transition: all 0.3s ease;
   font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
-align-self: center;
+  align-self: center;
 }
 
 .ingresar:hover {
-  /* Hover: Se rellena para la transición */
   background-color: #7a62fb;
   color: white !important;
   border: 1px solid #7a62fb;
-  
 }
 
 
-/* BOTÓN FINAL (VER TODOS LOS CURSOS DE FORMACIÓN) - SIN CAMBIOS EN ESTILO DE FONDO */
+/* BOTÓN FINAL (VER TODOS LOS CURSOS DE FORMACIÓN) */
 .verTodos {
   margin-top: 40px;
 }
 
 .verTodosBtn {
-  /* Este se mantiene RELLENO */
   background-color: #7a62fb;
   color: white !important;
   border: 1px solid #7a62fb;
   font-size: 1rem;
   padding: 10px 30px;
-  /* Ajuste para centrar el botón de "Ver todos" */
   align-self: center;
 }
 
-/* Hover para VerTodosBtn (Mantiene el efecto original) */
 .verTodosBtn:hover {
   background-color: #f4f0f9;
   color: #b45dfc !important;
   border: 1px solid #b45dfc;
 }
 
-/* 💡 ESTILOS PARA LA ETIQUETA ASINCRÓNICO - SIN CAMBIOS */
+/* 💡 ESTILOS PARA LA ETIQUETA ASINCRÓNICO */
 .cursoAsincronicoTag {
   position: absolute;
-  bottom: 10px; /* Abajo */
-  right: 10px; /* Derecha */
-  z-index: 15; /* Más alto que el logo */
-  background-color: #7a62fb; /* Color principal */
+  bottom: 10px; 
+  right: 10px; 
+  z-index: 15; 
+  background-color: #7a62fb; 
   color: white;
   padding: 4px 8px;
   border-radius: 5px;
@@ -162,5 +154,25 @@ align-self: center;
   .cursoCard {
     padding: 15px;
   }
+  
+  /* Ajuste de tamaño, posición y Z-INDEX en móvil */
+  .cursoLogoOverlay {
+    width: 40px;
+    top: 0px; /* <<<<< CORREGIDO en móvil */
+    left: 0px; /* <<<<< CORREGIDO en móvil */
+    z-index: 20; 
+  }
+}
 
+/*  Nueva capa de superposición para oscurecer la imagen */
+.cursoImgWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Color negro con 30% de opacidad */
+  z-index: 5; 
+  border-radius: 10px; 
 }
