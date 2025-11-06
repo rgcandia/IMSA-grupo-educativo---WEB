@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import cursosData from "../../data/cursos.json";
 import styles from "./CursosPage.module.css";
@@ -23,6 +23,12 @@ export default function CursosPage() {
     return coincideArea && coincideModalidad;
   });
 
+
+  //hacer scroll al top cuando se monte
+  useEffect(()=>{
+
+window.scrollTo({top:0,behavior:'smooth'});
+  },[]);
   return (
   <div>
     <Nav/>
