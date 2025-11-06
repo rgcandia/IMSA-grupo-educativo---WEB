@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "titulo": "Asistente Terapéutico",
+    "descripcion": "Formate para brindar acompañamiento y apoyo terapéutico a personas en situación de vulnerabilidad o con discapacidad.",
+    "imagen": "/img/cursos/asistente-terapeutico.jpg",
+    "area": "SALUD",
+    "modalidad": "Asincrónico",
+    "duracion": "6 meses",
+    "destacado": true
+  },
+  {
+    "id": 2,
+    "titulo": "Cuidador Domiciliario",
+    "descripcion": "Aprendé técnicas de cuidado, asistencia y acompañamiento a personas mayores o con necesidades especiales, en el ámbito domiciliario.",
+    "imagen": "/img/cursos/cuidador1.jpg",
+    "area": "SALUD",
+    "modalidad": "Asincrónico",
+    "duracion": "4 meses",
+    "destacado": false
+  },
+  {
+    "id": 3,
+    "titulo": "Cuidador Domiciliario Internacional",
+    "descripcion": "Capacitate para desempeñarte como cuidador domiciliario en el exterior, con conocimientos interculturales y buenas prácticas internacionales.",
+    "imagen": "/img/cursos/cuidador2.jpg",
+    "area": "SALUD",
+    "modalidad": "Asincrónico",
+    "duracion": "5 meses",
+    "destacado": false
+  },
+  {
+    "id": 4,
+    "titulo": "Auxiliar de Enfermería Domiciliaria",
+    "descripcion": "Desarrollá habilidades para asistir en tareas básicas de enfermería dentro del ámbito domiciliario, con enfoque en la atención humanizada.",
+    "imagen": "/img/cursos/enfermeria.jpg",
+    "area": "SALUD",
+    "modalidad": "Asincrónico",
+    "duracion": "6 meses",
+    "destacado": false
+  },
+  {
+    "id": 5,
+    "titulo": "Inglés Básico, Medio y Avanzado",
+    "descripcion": "Aprendé inglés desde cero o perfeccioná tu nivel con un enfoque práctico para la comunicación cotidiana, profesional o laboral.",
+    "imagen": "/img/cursos/ingles.jpg",
+    "area": "IDIOMAS",
+    "modalidad": "Asincrónico",
+    "duracion": "8 meses",
+    "destacado": true
+  },
+  {
+    "id": 6,
+    "titulo": "Electricidad Domiciliaria",
+    "descripcion": "Adquirí conocimientos teóricos y prácticos para realizar instalaciones, mantenimiento y reparación eléctrica en hogares.",
+    "imagen": "/img/cursos/electricidad.jpg",
+    "area": "TÉCNICOS",
+    "modalidad": "Asincrónico",
+    "duracion": "6 meses",
+    "destacado": true
+  },
+  {
+    "id": 7,
+    "titulo": "Cosmetología",
+    "descripcion": "Formate en técnicas de cuidado facial, corporal y estética integral, con conocimientos actualizados en cosmetología profesional.",
+    "imagen": "/img/cursos/cosmetologia.jpg",
+    "area": "BELLEZA",
+    "modalidad": "Asincrónico",
+    "duracion": "5 meses",
+    "destacado": true
+  }
+]
