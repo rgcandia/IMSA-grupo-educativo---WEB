@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import cursosData from "../../data/cursos.json";
 import styles from "./CursosPage.module.css";
-
+import Nav from '../Nav/Nav'
+import Footer from '../Footer/Footer'
 const LOGO_URL = "/logo_imsa_blanco.png";
 
 export default function CursosPage() {
@@ -23,7 +24,11 @@ export default function CursosPage() {
   });
 
   return (
+  <div>
+    <Nav/>
+ 
     <div className={styles.cursosContainer}>
+    
       <h2 className={styles.cursosTitle}>CURSOS DISPONIBLES</h2>
 
       {/* FILTROS */}
@@ -69,5 +74,8 @@ export default function CursosPage() {
         {cursosFiltrados.length === 0 && <p>No se encontraron cursos.</p>}
       </div>
     </div>
+
+    <Footer/>
+     </div>
   );
 }

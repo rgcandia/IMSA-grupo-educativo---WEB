@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ importamos navigate
 import style from './Carrousel.module.css';
 
 export default function Carrousel() {
@@ -35,6 +36,7 @@ export default function Carrousel() {
   const [indice, setIndice] = useState(0);
   const [pausado, setPausado] = useState(false);
   const intervaloRef = useRef(null);
+  const navigate = useNavigate(); // ✅ Hook para redirección
 
   const iniciarAutoAvance = () => {
     if (intervaloRef.current) clearInterval(intervaloRef.current);
@@ -55,7 +57,6 @@ export default function Carrousel() {
     setPausado(true);
     clearInterval(intervaloRef.current);
 
-    // Reactivar después de 15s
     setTimeout(() => {
       setPausado(false);
     }, 15000);
@@ -66,10 +67,21 @@ export default function Carrousel() {
     setPausado(true);
     clearInterval(intervaloRef.current);
 
-    // Reactivar después de 15s también
     setTimeout(() => {
       setPausado(false);
     }, 15000);
+  };
+
+  // ✅ Función para manejar los botones
+  const handleBotonClick = (textoBoton) => {
+    if (textoBoton === "Ver cursos de formación") {
+      navigate("/cursos"); // Redirige a la ruta /cursos
+    } else if (textoBoton === "Conocenos más") {
+      const elemento = document.getElementById("nosotros");
+      if (elemento) {
+        elemento.scrollIntoView({ behavior: "smooth" }); // Scroll suave al ID
+      }
+    }
   };
 
   const actual = slides[indice];
@@ -89,7 +101,12 @@ export default function Carrousel() {
         {actual.parrafos.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
-        <button className={style.boton}>{actual.boton}</button>
+        <button
+          className={style.boton}
+          onClick={() => handleBotonClick(actual.boton)}
+        >
+          {actual.boton}
+        </button>
       </div>
 
       {/* Controles manuales */}
