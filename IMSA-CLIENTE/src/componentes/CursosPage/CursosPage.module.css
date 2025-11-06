@@ -5,6 +5,7 @@
   min-height: 100vh; /* ocupa toda la pantalla */
   display: flex;
   flex-direction: column;
+  font-family: "Fredoka", sans-serif;
 }
 
 /* Título */
