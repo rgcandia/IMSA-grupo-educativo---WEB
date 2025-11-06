@@ -38,7 +38,7 @@ const [menuAbierto, setMenuAbierto] = useState(false);
           </div>  
           <div className={style.enlaces}>
             <a>CURSOS DE FORMACIÓN <IoCaretDown /></a>
-            <a>NOSOTROS</a>
+            <a href='#nosotros'>NOSOTROS</a>
             <a>CONTACTO</a>
             <a className={style.ingresar}>INGRESAR </a>
 

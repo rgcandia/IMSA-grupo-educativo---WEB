@@ -157,9 +157,9 @@
   
   /* Ajuste de tamaño, posición y Z-INDEX en móvil */
   .cursoLogoOverlay {
-    width: 40px;
-    top: 0px; /* <<<<< CORREGIDO en móvil */
-    left: 0px; /* <<<<< CORREGIDO en móvil */
+    width: 70px;
+    top: 5px; 
+    left: 5px; 
     z-index: 20; 
   }
 }

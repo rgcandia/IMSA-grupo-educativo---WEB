@@ -4,7 +4,7 @@ import { LightbulbIcon, TargetIcon, BookOpenIcon, RocketIcon  } from '@phosphor-
 
 export default function Nosotros() {
   return (
-    <section className={style.nosotros}>
+    <section id='nosotros' className={style.nosotros}>
       <div className={style.contenido}>
         <div className={style.texto}>
           <div className={style.tituloContainer}>
