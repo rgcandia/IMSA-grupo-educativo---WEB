@@ -7,7 +7,7 @@ const LOGO_URL = "/logo_imsa_blanco.png"; // Ruta del logo
 const Cursos = () => {
   return (
     <div className={styles.cursosContainer}>
-      <h2 className={styles.cursosTitle}>ÁREA DE CURSOS</h2>
+      <h2 className={styles.cursosTitle}>CURSOS DESTACADOS</h2>
 
       <div className={styles.cursosGrid}>
         {cursosData
