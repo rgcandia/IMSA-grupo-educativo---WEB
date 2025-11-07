@@ -128,8 +128,18 @@ textarea {
     padding: 30px 20px;
   }
 
+  .contactoImg {
+    flex: initial;      /* ya no fuerza 400px */
+    height: auto;       /* se ajusta al contenido */
+    margin-bottom: 20px; /* separa del form */
+  }
+
   .ilustracion {
-    max-width: 300px;
+    max-width: 200px; /* o el tamaño que quieras */
+    width: 80%;       /* proporcional */
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
   /* Formulario ocupa todo el ancho */
