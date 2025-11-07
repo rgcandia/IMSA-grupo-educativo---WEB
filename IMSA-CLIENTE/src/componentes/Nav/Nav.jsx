@@ -29,7 +29,7 @@ export default function Nav() {
       </div>
 
       <div className={style.enlaces}>
-        <a>CURSOS DE FORMACIÓN <IoCaretDown /></a>
+        <Link to='/cursos'>CURSOS DE FORMACIÓN <IoCaretDown /></Link>
 
         {/* Link a nosotros con hash */}
         <Link to="/#nosotros" onClick={handleMenuClick}>
@@ -53,7 +53,8 @@ export default function Nav() {
       {menuAbierto && (
         <div className={style.menuMobile}>
           <nav className={style.menuLinks}>
-            <a>CURSOS DE FORMACIÓN <IoCaretDown /></a>
+            <Link to='/cursos'>CURSOS DE FORMACIÓN <IoCaretDown /></Link>
+
             <Link to="/#nosotros" onClick={handleMenuClick}>
               NOSOTROS
             </Link>
