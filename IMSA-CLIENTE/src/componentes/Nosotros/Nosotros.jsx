@@ -1,7 +1,7 @@
 import style from './Nosotros.module.css';
 import logo from '../../assets/images/IMSA_Logo_Color.png';
 import { LightbulbIcon, TargetIcon, BookOpenIcon, RocketIcon  } from '@phosphor-icons/react';
-
+import {Link} from 'react-router-dom'
 export default function Nosotros() {
   return (
     <section id='nosotros' className={style.nosotros}>
@@ -45,7 +45,7 @@ export default function Nosotros() {
           </div>
 
           <div className={style.botonContainer}>
-            <a href="#" className={style.botonContacto}>Contactate con nosotros</a>
+            <Link to={'/contacto'} className={style.botonContacto}>Contactate con nosotros</Link>
           </div>
         </div>
 

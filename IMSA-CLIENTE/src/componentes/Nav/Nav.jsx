@@ -57,7 +57,7 @@ export default function Nav() {
             <Link to="/#nosotros" onClick={handleMenuClick}>
               NOSOTROS
             </Link>
-            <a>CONTACTO</a>
+            <Link to={'/contacto'}>CONTACTO</Link>
           </nav>
           <div className={style.menuRedes}>
             <FaFacebookF />

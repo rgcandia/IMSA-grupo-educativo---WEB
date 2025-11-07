@@ -104,6 +104,18 @@ export default function Contacto() {
         </div>
       </div>
       <Footer />
+
+          <a
+              href="https://wa.me/5491137729571"
+              className={styles.wafloat}
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="WhatsApp"
+              />
+            </a>
     </div>
   );
 }
