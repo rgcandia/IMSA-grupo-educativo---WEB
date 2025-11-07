@@ -40,7 +40,7 @@ export default function Nav() {
         <a className={style.ingresar}>INGRESAR</a>
       </div>
 
-      <div className={style.redes}>
+      <div className={style.redes}> 
         <FaFacebookF />
         <LuInstagram />
       </div>
