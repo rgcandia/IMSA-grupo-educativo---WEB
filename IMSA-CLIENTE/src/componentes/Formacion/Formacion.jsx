@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styles from './Formacion.module.css';
 
 const areas = [
@@ -11,27 +12,36 @@ const areas = [
 ];
 
 function Formacion() {
-  return (<>
-  <h2 className={styles.title2}>ÁREA DE FORMACIÓN</h2>
-    <div className={styles.container}>
-      {areas.map((area) => (
-        <div key={area.title} className={styles.card}>
-          <img
-            src={area.url_img}
-            alt={area.title}
-            className={styles.image}
-            loading="eager"
-          />
-          <div className={styles.content}>
-            <p className={styles.title}>{area.title}</p>
-            <button className={styles.button}>Ver cursos</button>
+  return (
+    <>
+      <h2 className={styles.title2}>ÁREA DE FORMACIÓN</h2>
+      <div className={styles.container}>
+        {areas.map((area) => (
+          <div key={area.title} className={styles.card}>
+            <img
+              src={area.url_img}
+              alt={area.title}
+              className={styles.image}
+              loading="eager"
+            />
+            <div className={styles.content}>
+              <p className={styles.title}>{area.title}</p>
+
+              {/* Link que lleva al componente de cursos con filtro */}
+              <Link
+                to="/cursos"
+                state={{ filtroArea: area.title }}
+                className={styles.button}
+              >
+                Ver cursos
+              </Link>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
-  
-  </>);
-  
+        ))}
+      </div>
+    </>
+  );
 }
 
 export default React.memo(Formacion);
+
