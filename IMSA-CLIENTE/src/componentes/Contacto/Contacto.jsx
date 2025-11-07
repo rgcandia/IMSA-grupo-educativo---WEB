@@ -46,8 +46,9 @@ export default function Contacto() {
 
           {/* Formulario */}
           <div className={styles.contactoFormWrapper}>
-            <h2 className={styles.titulo}>Contacto</h2>
-            {!enviado ? (
+           
+            {!enviado ? (<>
+                   <h2 className={styles.titulo}>Contacto</h2>
               <form onSubmit={handleSubmit} className={styles.contactoForm}>
                 <label>
                   Nombre completo<span className={styles.req}>*</span>
@@ -93,7 +94,7 @@ export default function Contacto() {
                 <button type="submit" className={styles.btnEnviar}>
                   Enviar
                 </button>
-              </form>
+              </form></>
             ) : (
               <div className={styles.mensajeEnviado}>
                 <h3>¡Gracias por contactarte!</h3>
