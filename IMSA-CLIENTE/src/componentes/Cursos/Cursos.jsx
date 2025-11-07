@@ -31,7 +31,7 @@ const Cursos = () => {
               </div>
               <h3>{curso.titulo}</h3>
               <p>{curso.descripcion}</p>
-              <button className={styles.ingresar}>Ver más</button>
+              <Link to={`/cursos/${curso.id}`} className={styles.ingresar}>Ver más</Link>
             </div>
           ))}
       </div>
