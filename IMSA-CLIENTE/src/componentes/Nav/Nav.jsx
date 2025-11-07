@@ -36,7 +36,7 @@ export default function Nav() {
           NOSOTROS
         </Link>
 
-        <a>CONTACTO</a>
+        <Link to='/contacto'>CONTACTO</Link>
         <a className={style.ingresar}>INGRESAR</a>
       </div>
 
@@ -57,7 +57,7 @@ export default function Nav() {
             <Link to="/#nosotros" onClick={handleMenuClick}>
               NOSOTROS
             </Link>
-            <Link to={'/contacto'}>CONTACTO</Link>
+            <Link to='/contacto'>CONTACTO</Link>
           </nav>
           <div className={style.menuRedes}>
             <FaFacebookF />
