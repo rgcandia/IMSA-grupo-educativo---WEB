@@ -131,7 +131,21 @@ textarea {
   .ilustracion {
     max-width: 300px;
   }
+
+  /* Formulario ocupa todo el ancho */
+  .contactoFormWrapper {
+    flex: 1 1 100%; /* ahora ocupa todo el ancho */
+    width: 100%;
+  }
+
+  /* Inputs y textarea ocupan todo el ancho */
+  .contactoForm input,
+  .contactoForm textarea {
+    width: 100%;
+    box-sizing: border-box; /* incluye padding y borde */
+  }
 }
+
 /* === Botón de WhatsApp === */
 
 .wafloat {
