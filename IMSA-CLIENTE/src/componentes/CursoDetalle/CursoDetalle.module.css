@@ -133,3 +133,58 @@
     font-size: 1.4rem;
   }
 }
+
+/* =========================================
+   NUEVO CÓDIGO AGREGADO PARA LAS LISTAS
+   (Sin tocar lo anterior)
+   ========================================= */
+
+.contenedorListas {
+  width: 100%;
+  max-width: 700px; /* Para que no se estire demasiado en pantallas anchas */
+  margin-bottom: 30px;
+  text-align: left; /* Importante: las listas se leen mejor alineadas a la izquierda */
+}
+
+.cajaLista {
+  margin-bottom: 25px;
+  background-color: #fbfaff; /* Fondo muy sutil para separar visualmente */
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #7a62fb; /* Detalle con tu color principal */
+}
+
+.subtituloLista {
+  font-family: "Montserrat", sans-serif;
+  color: #7a62fb;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.listaItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listaItems li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  color: #444;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+/* Checkmark minimalista usando tu color */
+.listaItems li::before {
+  content: "•"; 
+  color: #7a62fb;
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 5px;
+  top: -2px;
+}

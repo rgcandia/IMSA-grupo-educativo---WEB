@@ -31,11 +31,15 @@ export default function CursoDetalle() {
     );
   }
 
+  // Extraemos detalle para usarlo fácil
+  const { detalle } = curso;
+
   return (
     <div>
       <Nav />
       <div className={styles.detalleContainer}>
         <div className={styles.detalleCard}>
+          
           <div className={styles.imagenWrapper}>
             <img
               src={LOGO_URL}
@@ -54,8 +58,8 @@ export default function CursoDetalle() {
 
           <div className={styles.detalleContenido}>
             <h2>{curso.titulo}</h2>
-            <p className={styles.descripcion}>{curso.descripcion}</p>
-
+            
+            {/* Info Extra Original */}
             <div className={styles.infoExtra}>
               <p>
                 <strong>Área:</strong> {curso.area}
@@ -64,6 +68,48 @@ export default function CursoDetalle() {
                 <strong>Duración:</strong> {curso.duracion}
               </p>
             </div>
+
+            <p className={styles.descripcion}>{curso.descripcion}</p>
+
+            {/* === AQUI INICIA LA NUEVA SECCION DE DETALLES === */}
+            {/* Usamos un contenedor para alinear las listas a la izquierda pero centradas en la card */}
+            <div className={styles.contenedorListas}>
+              
+              {/* 1. Metodología (Solo si existe) */}
+              {detalle?.metodologia && (
+                <div className={styles.cajaLista}>
+                  <span className={styles.subtituloLista}>Metodología</span>
+                  <ul className={styles.listaItems}>
+                    <li>{detalle.metodologia}</li>
+                  </ul>
+                </div>
+              )}
+
+              {/* 2. Temario */}
+              {detalle?.temario && (
+                <div className={styles.cajaLista}>
+                  <span className={styles.subtituloLista}>Temario</span>
+                  <ul className={styles.listaItems}>
+                    {detalle.temario.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* 3. Salida Laboral */}
+              {detalle?.salida_laboral && (
+                <div className={styles.cajaLista}>
+                  <span className={styles.subtituloLista}>Salida Laboral</span>
+                  <ul className={styles.listaItems}>
+                    {detalle.salida_laboral.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+            {/* === FIN DE LA NUEVA SECCION === */}
 
             <Link to="/cursos" className={styles.volverBtn}>
               ← Volver a cursos
